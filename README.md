@@ -1,3 +1,4 @@
+'''uml
 @startuml
 skinparam {
    defaultFontName NotoSansCJKjp-Regular
@@ -19,3 +20,4 @@ skinparam {
    QueueSaveShop2 -down-> CloudFirestore
    QueueSaveShop3 -down-> CloudFirestore
 @enduml
+'''
