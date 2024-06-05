@@ -1,9 +1,7 @@
 ```uml
 @startuml
-Alice -> Bob: Authentication Request
-Bob --> Alice: Authentication Response
-
-Alice -> Bob: Another authentication Request
-Alice <-- Bob: another authentication Response
+のび太 -> 剛田武 : hello
+kento -> 鈴木太郎 : goodbye
+のびすけ -> vinijr : 12345
 @enduml
 ```
