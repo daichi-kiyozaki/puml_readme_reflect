@@ -5,3 +5,28 @@ kento -> 鈴木太郎 : goodbye
 のびすけ -> vinijr : 12345
 @enduml
 ```
+
+```uml
+@startuml
+skinparam {
+   defaultFontName NotoSansCJKjp-Regular
+   }
+   interface "剛田武" as CloudScheduler
+   note right of CloudScheduler : よろしくお願いします
+
+   agent CronUpdateShops
+   agent QueueSaveShop as QueueSaveShop1
+   agent QueueSaveShop as QueueSaveShop2
+   agent QueueSaveShop as QueueSaveShop3
+   database "Cloud Firestore" as CloudFirestore
+
+   CloudScheduler -down-> CronUpdateShops
+   CronUpdateShops -down-> QueueSaveShop1
+   CronUpdateShops -down-> QueueSaveShop2
+   CronUpdateShops -down-> QueueSaveShop3
+   QueueSaveShop1 -down-> CloudFirestore
+   QueueSaveShop2 -down-> CloudFirestore
+   QueueSaveShop3 -down-> CloudFirestore
+@enduml
+```
+
